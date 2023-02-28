@@ -2,6 +2,7 @@ import { FlatList, ImageBackground } from "react-native";
 import MessageItem from "../components/Message";
 import { bg } from "../res/images";
 import Data from "../../assets/data/messages.json"
+import InputBox from "../components/InputBox";
 
 
 const Chat = () => {
@@ -13,6 +14,8 @@ const Chat = () => {
         data={Data}
         renderItem={({ item }) => <MessageItem message={item} /> }
       />    
+
+      <InputBox />
     </ImageBackground>
   );
 }
